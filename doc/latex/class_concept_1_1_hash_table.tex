@@ -1,0 +1,197 @@
+\hypertarget{class_concept_1_1_hash_table}{}\section{Concept\+::Hash\+Table$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$ Class Template Reference}
+\label{class_concept_1_1_hash_table}\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+
+
+{\ttfamily \#include $<$Hash\+Table.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_concept_1_1_hash_table_a567c99ad671a5065563483689abdf399}{const\+\_\+iterator}} = typename Bucket\+::const\+\_\+iterator
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_concept_1_1_hash_table_a5a2046a7319fe85a746fc2bbfef8c55d}{Hash\+Table}} ()
+\item 
+\mbox{\hyperlink{class_concept_1_1_hash_table_ae99a90d710d059df81e6a75ef43c3569}{$\sim$\+Hash\+Table}} ()
+\item 
+double \mbox{\hyperlink{class_concept_1_1_hash_table_a6211e9857610c29fb0665177e3d365e8}{load\+Factor}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{class_concept_1_1_hash_table_ae68cb33ed169ec0072be4fbeab1e4ff7}{size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{class_concept_1_1_hash_table_aab2236e5ef9f27eeed418a00bdea65b8}{bucket\+Count}} () const
+\item 
+\mbox{\Hypertarget{class_concept_1_1_hash_table_ab964fc586a87b5cf5f5de874ac345785}\label{class_concept_1_1_hash_table_ab964fc586a87b5cf5f5de874ac345785}} 
+size\+\_\+t {\bfseries auto\+Resize\+Value} () const
+\item 
+Value \& \mbox{\hyperlink{class_concept_1_1_hash_table_a4172a9c3b5c528b5d0b79b1c58ab2baf}{operator\mbox{[}$\,$\mbox{]}}} (const Key \&key)
+\item 
+\mbox{\hyperlink{class_concept_1_1_hash_table_a567c99ad671a5065563483689abdf399}{const\+\_\+iterator}} \mbox{\hyperlink{class_concept_1_1_hash_table_acaa2106cab7de32f3a6467b023d04773}{find}} (const Key \&key) const
+\item 
+void \mbox{\hyperlink{class_concept_1_1_hash_table_aae3621f4d8568e90844b7366c030321b}{rehash}} (size\+\_\+t new\+Bucket\+Count)
+\item 
+\mbox{\hyperlink{class_concept_1_1_hash_table_a567c99ad671a5065563483689abdf399}{const\+\_\+iterator}} \mbox{\hyperlink{class_concept_1_1_hash_table_a4621e02c1fedb16e29a88ae0b517ffd2}{end}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_concept_1_1_hash_table_a5cf3363e4ff4388db776b3ecb621cf53}\label{class_concept_1_1_hash_table_a5cf3363e4ff4388db776b3ecb621cf53}} 
+static constexpr size\+\_\+t {\bfseries M\+A\+X\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT} = 1000000007
+\item 
+\mbox{\Hypertarget{class_concept_1_1_hash_table_ad5a277dcc48640e13cf813153aaad5bb}\label{class_concept_1_1_hash_table_ad5a277dcc48640e13cf813153aaad5bb}} 
+static constexpr double {\bfseries L\+O\+A\+D\+\_\+\+F\+A\+C\+T\+O\+R\+\_\+\+R\+E\+H\+A\+S\+H\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD} = 0.\+8
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$\newline
+class Concept\+::\+Hash\+Table$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$}
+
+Class \mbox{\hyperlink{class_concept_1_1_hash}{Hash}} table The default \mbox{\hyperlink{class_concept_1_1_hash}{Hash}} function behind the \mbox{\hyperlink{class_concept_1_1_hash}{Hash}} class is Fowler-\/\+Noll-\/\+Vo. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_concept_1_1_hash_table_a567c99ad671a5065563483689abdf399}\label{class_concept_1_1_hash_table_a567c99ad671a5065563483689abdf399}} 
+\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+\subsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$ \\
+using \mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table}}$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$\+::\mbox{\hyperlink{class_concept_1_1_hash_table_a567c99ad671a5065563483689abdf399}{const\+\_\+iterator}} =  typename Bucket\+::const\+\_\+iterator}
+
+The \mbox{\hyperlink{class_concept_1_1_hash}{Hash}} table const iterator 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_concept_1_1_hash_table_a5a2046a7319fe85a746fc2bbfef8c55d}\label{class_concept_1_1_hash_table_a5a2046a7319fe85a746fc2bbfef8c55d}} 
+\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}!HashTable@{HashTable}}
+\index{HashTable@{HashTable}!Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+\subsubsection{\texorpdfstring{HashTable()}{HashTable()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$ \\
+\mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table}}$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$\+::\mbox{\hyperlink{class_concept_1_1_hash_table}{Hash\+Table}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor \mbox{\Hypertarget{class_concept_1_1_hash_table_ae99a90d710d059df81e6a75ef43c3569}\label{class_concept_1_1_hash_table_ae99a90d710d059df81e6a75ef43c3569}} 
+\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}!````~HashTable@{$\sim$HashTable}}
+\index{````~HashTable@{$\sim$HashTable}!Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+\subsubsection{\texorpdfstring{$\sim$HashTable()}{~HashTable()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$ \\
+\mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table}}$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$\+::$\sim$\mbox{\hyperlink{class_concept_1_1_hash_table}{Hash\+Table}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor Delete all uckets 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concept_1_1_hash_table_aab2236e5ef9f27eeed418a00bdea65b8}\label{class_concept_1_1_hash_table_aab2236e5ef9f27eeed418a00bdea65b8}} 
+\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}!bucketCount@{bucketCount}}
+\index{bucketCount@{bucketCount}!Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+\subsubsection{\texorpdfstring{bucketCount()}{bucketCount()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$ \\
+size\+\_\+t \mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table}}$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$\+::bucket\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of buckets 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_hash_table_aab2236e5ef9f27eeed418a00bdea65b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_hash_table_a4621e02c1fedb16e29a88ae0b517ffd2}\label{class_concept_1_1_hash_table_a4621e02c1fedb16e29a88ae0b517ffd2}} 
+\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}!end@{end}}
+\index{end@{end}!Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$ \\
+\mbox{\hyperlink{class_concept_1_1_hash_table_a567c99ad671a5065563483689abdf399}{const\+\_\+iterator}} \mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table}}$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a constant iterator positioned above the last entry 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_hash_table_a4621e02c1fedb16e29a88ae0b517ffd2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_hash_table_acaa2106cab7de32f3a6467b023d04773}\label{class_concept_1_1_hash_table_acaa2106cab7de32f3a6467b023d04773}} 
+\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}!find@{find}}
+\index{find@{find}!Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+\subsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$ \\
+\mbox{\hyperlink{class_concept_1_1_hash_table_a567c99ad671a5065563483689abdf399}{const\+\_\+iterator}} \mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table}}$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$\+::find (\begin{DoxyParamCaption}\item[{const Key \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the entry at key or \mbox{\hyperlink{class_concept_1_1_hash_table_a4621e02c1fedb16e29a88ae0b517ffd2}{end()}} if missing 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_concept_1_1_hash_table_acaa2106cab7de32f3a6467b023d04773_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_hash_table_a6211e9857610c29fb0665177e3d365e8}\label{class_concept_1_1_hash_table_a6211e9857610c29fb0665177e3d365e8}} 
+\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}!loadFactor@{loadFactor}}
+\index{loadFactor@{loadFactor}!Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+\subsubsection{\texorpdfstring{loadFactor()}{loadFactor()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$ \\
+double \mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table}}$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$\+::load\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the Hashtable load factor 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_hash_table_a6211e9857610c29fb0665177e3d365e8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_hash_table_a4172a9c3b5c528b5d0b79b1c58ab2baf}\label{class_concept_1_1_hash_table_a4172a9c3b5c528b5d0b79b1c58ab2baf}} 
+\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$ \\
+Value\& \mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table}}$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const Key \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Find or create the entry at key if missing \begin{DoxyReturn}{Returns}
+the entry at key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concept_1_1_hash_table_aae3621f4d8568e90844b7366c030321b}\label{class_concept_1_1_hash_table_aae3621f4d8568e90844b7366c030321b}} 
+\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}!rehash@{rehash}}
+\index{rehash@{rehash}!Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+\subsubsection{\texorpdfstring{rehash()}{rehash()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$ \\
+void \mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table}}$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$\+::rehash (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{new\+Bucket\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Extend and rehash. \begin{DoxyNote}{Note}
+the table size can only be increased 
+\end{DoxyNote}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_hash_table_aae3621f4d8568e90844b7366c030321b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_hash_table_ae68cb33ed169ec0072be4fbeab1e4ff7}\label{class_concept_1_1_hash_table_ae68cb33ed169ec0072be4fbeab1e4ff7}} 
+\index{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}!size@{size}}
+\index{size@{size}!Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$@{Concept::HashTable$<$ Key, Value, SmallHashTableBucketCount, HashType $>$}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Value, size\+\_\+t Small\+Hash\+Table\+Bucket\+Count = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT, typename Hash\+Type = Hash$<$\+Key$>$$>$ \\
+size\+\_\+t \mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table}}$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of elements 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_concept_1_1_hash_table_ae68cb33ed169ec0072be4fbeab1e4ff7_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_hash_table_8hpp}{Hash\+Table.\+hpp}}\end{DoxyCompactItemize}

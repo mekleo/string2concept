@@ -1,0 +1,143 @@
+\hypertarget{class_concept_1_1_unit_test_1_1_test}{}\section{Concept\+::Unit\+Test\+::Test Class Reference}
+\label{class_concept_1_1_unit_test_1_1_test}\index{Concept::UnitTest::Test@{Concept::UnitTest::Test}}
+
+
+{\ttfamily \#include $<$Unit\+Test.\+hpp$>$}
+
+
+
+Inheritance diagram for Concept\+::Unit\+Test\+::Test\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_unit_test_1_1_test__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_concept_1_1_unit_test_1_1_test_a29ca1a5654e3fe0a8911a21a5c2e0dce}{Test}} ()
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_concept_1_1_unit_test_1_1_test_a28c0cddd9719cd456fa92a142ae6c59d}{name}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_concept_1_1_unit_test_1_1_test_aa8c081714f642696eeef640911be752a}{operator()}} ()=0
+\item 
+\mbox{\Hypertarget{class_concept_1_1_unit_test_1_1_test_ab9220ef5e17da881b906ef89238b58af}\label{class_concept_1_1_unit_test_1_1_test_ab9220ef5e17da881b906ef89238b58af}} 
+bool {\bfseries status} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \mbox{\hyperlink{class_concept_1_1_unit_test_1_1_test_ab12b779095f2e0a9322c8bffa2c8941b}{A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+AL}} (const T1 \&expected, const T2 \&actual)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \mbox{\hyperlink{class_concept_1_1_unit_test_1_1_test_ad4d91c6b7d271d55fd037c2009b1927e}{A\+S\+S\+E\+R\+T\+\_\+\+N\+O\+T\+\_\+\+E\+Q\+U\+AL}} (const T1 \&expected, const T2 \&actual)
+\item 
+\mbox{\Hypertarget{class_concept_1_1_unit_test_1_1_test_ad020550928dbae1a5d55e999411ad722}\label{class_concept_1_1_unit_test_1_1_test_ad020550928dbae1a5d55e999411ad722}} 
+bool {\bfseries assert\+True} (bool condition, const char $\ast$text)
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_concept_1_1_unit_test_1_1_test_a0aabaa449e45a2a99e473693eed0f3ed}{status\+String}} (bool status)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_concept_1_1_unit_test_1_1_test_abd55e8d261a039126769a522b2c6369d}\label{class_concept_1_1_unit_test_1_1_test_abd55e8d261a039126769a522b2c6369d}} 
+bool \mbox{\hyperlink{class_concept_1_1_unit_test_1_1_test_abd55e8d261a039126769a522b2c6369d}{\+\_\+status}}
+\begin{DoxyCompactList}\small\item\em The test status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class defining the test interface 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_concept_1_1_unit_test_1_1_test_a29ca1a5654e3fe0a8911a21a5c2e0dce}\label{class_concept_1_1_unit_test_1_1_test_a29ca1a5654e3fe0a8911a21a5c2e0dce}} 
+\index{Concept::UnitTest::Test@{Concept::UnitTest::Test}!Test@{Test}}
+\index{Test@{Test}!Concept::UnitTest::Test@{Concept::UnitTest::Test}}
+\subsubsection{\texorpdfstring{Test()}{Test()}}
+{\footnotesize\ttfamily Concept\+::\+Unit\+Test\+::\+Test\+::\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concept_1_1_unit_test_1_1_test_ab12b779095f2e0a9322c8bffa2c8941b}\label{class_concept_1_1_unit_test_1_1_test_ab12b779095f2e0a9322c8bffa2c8941b}} 
+\index{Concept::UnitTest::Test@{Concept::UnitTest::Test}!ASSERT\_EQUAL@{ASSERT\_EQUAL}}
+\index{ASSERT\_EQUAL@{ASSERT\_EQUAL}!Concept::UnitTest::Test@{Concept::UnitTest::Test}}
+\subsubsection{\texorpdfstring{ASSERT\_EQUAL()}{ASSERT\_EQUAL()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+bool Concept\+::\+Unit\+Test\+::\+Test\+::\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+AL (\begin{DoxyParamCaption}\item[{const T1 \&}]{expected,  }\item[{const T2 \&}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Check equality Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_concept_1_1_unit_test_1_1_test_ab12b779095f2e0a9322c8bffa2c8941b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_unit_test_1_1_test_ab12b779095f2e0a9322c8bffa2c8941b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_unit_test_1_1_test_ad4d91c6b7d271d55fd037c2009b1927e}\label{class_concept_1_1_unit_test_1_1_test_ad4d91c6b7d271d55fd037c2009b1927e}} 
+\index{Concept::UnitTest::Test@{Concept::UnitTest::Test}!ASSERT\_NOT\_EQUAL@{ASSERT\_NOT\_EQUAL}}
+\index{ASSERT\_NOT\_EQUAL@{ASSERT\_NOT\_EQUAL}!Concept::UnitTest::Test@{Concept::UnitTest::Test}}
+\subsubsection{\texorpdfstring{ASSERT\_NOT\_EQUAL()}{ASSERT\_NOT\_EQUAL()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+bool Concept\+::\+Unit\+Test\+::\+Test\+::\+A\+S\+S\+E\+R\+T\+\_\+\+N\+O\+T\+\_\+\+E\+Q\+U\+AL (\begin{DoxyParamCaption}\item[{const T1 \&}]{expected,  }\item[{const T2 \&}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Check inequality Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_unit_test_1_1_test_ad4d91c6b7d271d55fd037c2009b1927e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_unit_test_1_1_test_ad4d91c6b7d271d55fd037c2009b1927e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_unit_test_1_1_test_a28c0cddd9719cd456fa92a142ae6c59d}\label{class_concept_1_1_unit_test_1_1_test_a28c0cddd9719cd456fa92a142ae6c59d}} 
+\index{Concept::UnitTest::Test@{Concept::UnitTest::Test}!name@{name}}
+\index{name@{name}!Concept::UnitTest::Test@{Concept::UnitTest::Test}}
+\subsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Concept\+::\+Unit\+Test\+::\+Test\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+The test name 
+
+Implemented in \mbox{\hyperlink{class_concept_1_1_test_concept_extractor_a6b957e2b9689545c23e800e67e33196a}{Concept\+::\+Test\+Concept\+Extractor}}, \mbox{\hyperlink{class_concept_1_1_test_hash_a5bfa2f26b227562240a70d23f1df2018}{Concept\+::\+Test\+Hash}}, \mbox{\hyperlink{class_concept_1_1_test_hash_table_ace0c357ea2d8dbd2cc7d7d8dae9e35ec}{Concept\+::\+Test\+Hash\+Table}}, \mbox{\hyperlink{class_concept_1_1_test_string_a0d43f2724c9d8c3eec87076cdd418461}{Concept\+::\+Test\+String}}, \mbox{\hyperlink{class_concept_1_1_test_vector_a4ac7a2e867dc34adb9ed55c38046838b}{Concept\+::\+Test\+Vector}}, and \mbox{\hyperlink{class_concept_1_1_test_words_a1466d72428143b610937c692545de6f3}{Concept\+::\+Test\+Words}}.
+
+\mbox{\Hypertarget{class_concept_1_1_unit_test_1_1_test_aa8c081714f642696eeef640911be752a}\label{class_concept_1_1_unit_test_1_1_test_aa8c081714f642696eeef640911be752a}} 
+\index{Concept::UnitTest::Test@{Concept::UnitTest::Test}!operator()@{operator()}}
+\index{operator()@{operator()}!Concept::UnitTest::Test@{Concept::UnitTest::Test}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual void Concept\+::\+Unit\+Test\+::\+Test\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+The test body \begin{DoxyReturn}{Returns}
+true if sucessful, otherwise false 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_concept_1_1_test_concept_extractor_a32d377bd7d03420a7f470a840cd654cc}{Concept\+::\+Test\+Concept\+Extractor}}, \mbox{\hyperlink{class_concept_1_1_test_hash_aaa06219ede091614bb050ede4f8676f0}{Concept\+::\+Test\+Hash}}, \mbox{\hyperlink{class_concept_1_1_test_hash_table_a64943226aff8a1ac3f3d1b875159bdfe}{Concept\+::\+Test\+Hash\+Table}}, \mbox{\hyperlink{class_concept_1_1_test_string_a4d493ef2d0632c5015042821be5682ff}{Concept\+::\+Test\+String}}, \mbox{\hyperlink{class_concept_1_1_test_vector_ac53c3efce4e5a4adad27e65d5486313d}{Concept\+::\+Test\+Vector}}, and \mbox{\hyperlink{class_concept_1_1_test_words_ac268229701b31e0aab5764227b9cdf0b}{Concept\+::\+Test\+Words}}.
+
+\mbox{\Hypertarget{class_concept_1_1_unit_test_1_1_test_a0aabaa449e45a2a99e473693eed0f3ed}\label{class_concept_1_1_unit_test_1_1_test_a0aabaa449e45a2a99e473693eed0f3ed}} 
+\index{Concept::UnitTest::Test@{Concept::UnitTest::Test}!statusString@{statusString}}
+\index{statusString@{statusString}!Concept::UnitTest::Test@{Concept::UnitTest::Test}}
+\subsubsection{\texorpdfstring{statusString()}{statusString()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Concept\+::\+Unit\+Test\+::\+Test\+::status\+String (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Text representation of the status Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_unit_test_1_1_test_a0aabaa449e45a2a99e473693eed0f3ed_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_unit_test_8hpp}{Unit\+Test.\+hpp}}\end{DoxyCompactItemize}

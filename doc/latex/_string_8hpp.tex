@@ -1,0 +1,124 @@
+\hypertarget{_string_8hpp}{}\section{String.\+hpp File Reference}
+\label{_string_8hpp}\index{String.hpp@{String.hpp}}
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Include dependency graph for String.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{_string_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_string_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_concept_1_1_string}{Concept\+::\+String$<$ Small\+String\+Length $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\std\+::ostream \& \mbox{\hyperlink{_string_8hpp_a55e908a90d10aa1b68a87efec55d93d4}{Concept\+::operator$<$$<$}} (std\+::ostream \&os, const String$<$ N $>$ \&str)
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\bool \mbox{\hyperlink{_string_8hpp_ae915c8c04e4724459df6089fdae6e69e}{Concept\+::operator==}} (const char $\ast$cstr, const String$<$ N $>$ \&str)
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\bool \mbox{\hyperlink{_string_8hpp_a382ad2dd8526de1d41a79a6a5a466a05}{Concept\+::operator!=}} (const char $\ast$cstr, const String$<$ N $>$ \&str)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_string_8hpp_a415d4a1ef48921f97fb8d3693707d932}\label{_string_8hpp_a415d4a1ef48921f97fb8d3693707d932}} 
+const size\+\_\+t \mbox{\hyperlink{_string_8hpp_a415d4a1ef48921f97fb8d3693707d932}{Concept\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+TH}} = sizeof(void$\ast$)
+\begin{DoxyCompactList}\small\item\em Reuse pointer size as small string storage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Leonce Mekinda \href{https://sites.google.com/site/leoncemekinda/}{\texttt{ https\+://sites.\+google.\+com/site/leoncemekinda/}}
+\end{DoxyAuthor}
+\hypertarget{_words_8hpp_LICENSE}{}\subsection{L\+I\+C\+E\+N\+SE}\label{_words_8hpp_LICENSE}
+The M\+IT License
+
+Copyright(c) 2019 Leonce Mekinda
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files(the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and / or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions \+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+N\+T.\+IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE
+
+
+
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_string_8hpp_file_a382ad2dd8526de1d41a79a6a5a466a05}\label{_string_8hpp_file_a382ad2dd8526de1d41a79a6a5a466a05}} 
+\index{String.hpp@{String.hpp}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!String.hpp@{String.hpp}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N$>$ \\
+bool Concept\+::operator!= (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cstr,  }\item[{const \mbox{\hyperlink{class_concept_1_1_string}{String}}$<$ N $>$ \&}]{str }\end{DoxyParamCaption})}
+
+Inequality check overload Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{_string_8hpp_a382ad2dd8526de1d41a79a6a5a466a05_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{_string_8hpp_a382ad2dd8526de1d41a79a6a5a466a05_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_string_8hpp_file_a55e908a90d10aa1b68a87efec55d93d4}\label{_string_8hpp_file_a55e908a90d10aa1b68a87efec55d93d4}} 
+\index{String.hpp@{String.hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!String.hpp@{String.hpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N$>$ \\
+std\+::ostream\& Concept\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_concept_1_1_string}{String}}$<$ N $>$ \&}]{str }\end{DoxyParamCaption})}
+
+Output stream operator overload Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{_string_8hpp_a55e908a90d10aa1b68a87efec55d93d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{_string_8hpp_a55e908a90d10aa1b68a87efec55d93d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_string_8hpp_file_ae915c8c04e4724459df6089fdae6e69e}\label{_string_8hpp_file_ae915c8c04e4724459df6089fdae6e69e}} 
+\index{String.hpp@{String.hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!String.hpp@{String.hpp}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N$>$ \\
+bool Concept\+::operator== (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cstr,  }\item[{const \mbox{\hyperlink{class_concept_1_1_string}{String}}$<$ N $>$ \&}]{str }\end{DoxyParamCaption})}
+
+Equality check overload Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{_string_8hpp_ae915c8c04e4724459df6089fdae6e69e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{_string_8hpp_ae915c8c04e4724459df6089fdae6e69e_icgraph}
+\end{center}
+\end{figure}

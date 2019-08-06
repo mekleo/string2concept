@@ -1,0 +1,525 @@
+\hypertarget{class_concept_1_1_vector}{}\section{Concept\+::Vector$<$ T, Small\+Vector\+Size $>$ Class Template Reference}
+\label{class_concept_1_1_vector}\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+
+
+{\ttfamily \#include $<$Vector.\+hpp$>$}
+
+
+
+Collaboration diagram for Concept\+::Vector$<$ T, Small\+Vector\+Size $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_concept_1_1_vector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_concept_1_1_vector_a279e17ea7182680f811e238bebb84232}{Insertion}} \{ {\bfseries U\+N\+O\+R\+D\+E\+R\+ED}, 
+\mbox{\hyperlink{class_concept_1_1_vector_a279e17ea7182680f811e238bebb84232abe7a0ac5e472b74b4bdc9c634c6c0fc3}{O\+R\+D\+E\+R\+ED}}, 
+\mbox{\hyperlink{class_concept_1_1_vector_a279e17ea7182680f811e238bebb84232a6fd8fe1cd97c112ec879b5e2167a94f4}{U\+N\+I\+Q\+UE}}
+ \}
+\item 
+\mbox{\Hypertarget{class_concept_1_1_vector_a512818318beb13e5f8d4e3f2bb381c7b}\label{class_concept_1_1_vector_a512818318beb13e5f8d4e3f2bb381c7b}} 
+using {\bfseries iterator} = T $\ast$
+\item 
+\mbox{\Hypertarget{class_concept_1_1_vector_a7c025d244bbe6a841da65171170b5bde}\label{class_concept_1_1_vector_a7c025d244bbe6a841da65171170b5bde}} 
+using {\bfseries const\+\_\+iterator} = const T $\ast$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector_a111960a70fa8b29a66ce1549039587d5}{Vector}} ()
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector_a0fa645743cfbf3f3228743390ab30ddc}{Vector}} (std\+::initializer\+\_\+list$<$ T $>$ init\+List)
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector_af9fdc77be6f6efa6c5bae8c565c32c1a}{Vector}} (const \mbox{\hyperlink{class_concept_1_1_vector}{Vector}} \&other)
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector_a23dd7da897297e5b69f1eefc55815cc0}{Vector}} (\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} \&\&other)
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector_ac2d544db8d0f9ebbd8802d0666ad930a}{Vector}} (const T $\ast$buffer, size\+\_\+t len, bool copy=true)
+\item 
+{\footnotesize template$<$size\+\_\+t N, typename C\+H\+A\+R\+\_\+\+O\+N\+LY  = std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$\+T, char$>$\+::value, void$>$$>$ }\\\mbox{\hyperlink{class_concept_1_1_vector_af46219c89ed3a789fb78db51b0ec7639}{Vector}} (const \mbox{\hyperlink{class_concept_1_1_string}{String}}$<$ N $>$ \&str, bool copy=true)
+\item 
+{\footnotesize template$<$size\+\_\+t N, typename C\+H\+A\+R\+\_\+\+O\+N\+LY  = std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$\+T, char$>$\+::value, void$>$$>$ }\\\mbox{\hyperlink{class_concept_1_1_vector_a69f43693d96addb57df7226512891c01}{Vector}} (\mbox{\hyperlink{class_concept_1_1_string}{String}}$<$ N $>$ \&\&str)
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector_a196f6eef1b0d3c04955d71d597e37c6f}{$\sim$\+Vector}} ()
+\item 
+void \mbox{\hyperlink{class_concept_1_1_vector_a5d08a1e6b61f98f85076646d06ba8640}{reserve}} (size\+\_\+t vector\+Size)
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} \& \mbox{\hyperlink{class_concept_1_1_vector_a0ea691819713d696baa31ddba1240f13}{operator=}} (const \mbox{\hyperlink{class_concept_1_1_vector}{Vector}} \&other)
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} \& \mbox{\hyperlink{class_concept_1_1_vector_a3a30dc7360a5e0a94a80fe760446690c}{operator=}} (\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} \&\&other)
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} \& \mbox{\hyperlink{class_concept_1_1_vector_a53641dbb6e511072424b38ca2ffdeeda}{operator+=}} (const T \&value)
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} \& \mbox{\hyperlink{class_concept_1_1_vector_ab05ae64ae1973bf0c115575cadd2ebd8}{operator+=}} (const \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ T, N $>$ \&other)
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\bool \mbox{\hyperlink{class_concept_1_1_vector_a62f543e01ccc500d04e85a70b81bbfb2}{operator==}} (const \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ T, N $>$ \&other) const
+\item 
+void \mbox{\hyperlink{class_concept_1_1_vector_a561e80a9c94307340601b7ab2270e101}{push\+\_\+back}} (const T \&value)
+\item 
+iterator \mbox{\hyperlink{class_concept_1_1_vector_a118524e2ff65811ad0ad425153651a1f}{begin}} ()
+\item 
+iterator \mbox{\hyperlink{class_concept_1_1_vector_acf6f0b48aa0ecbd09e327d6b173d9ed8}{end}} ()
+\item 
+iterator \mbox{\hyperlink{class_concept_1_1_vector_a27a72907afb7223fe8a4f892000c8322}{last}} ()
+\item 
+const\+\_\+iterator \mbox{\hyperlink{class_concept_1_1_vector_a0291fef67540e069d5b58d22f37f165f}{begin}} () const
+\item 
+const\+\_\+iterator \mbox{\hyperlink{class_concept_1_1_vector_aa9a137bf9a8054ff5a5d543f45583fe5}{end}} () const
+\item 
+const\+\_\+iterator \mbox{\hyperlink{class_concept_1_1_vector_a6e0abe20c6601aafaa79581514243181}{last}} () const
+\item 
+T \& \mbox{\hyperlink{class_concept_1_1_vector_adb9742c5303dcae29b2b0bc933f52dec}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t pos)
+\item 
+const T \& \mbox{\hyperlink{class_concept_1_1_vector_a05d5953700c6b16d416be2b5bcc5a16e}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t pos) const
+\item 
+iterator \mbox{\hyperlink{class_concept_1_1_vector_abda5f983b8e539a72ea93e1a051d2b9c}{insert}} (const T \&value, int policy=Insertion\+::\+U\+N\+O\+R\+D\+E\+R\+ED)
+\item 
+bool \mbox{\hyperlink{class_concept_1_1_vector_a17d62b0ccb0f1cceb78748c44f625269}{contains}} (const T \&value, std\+::function$<$ bool(const T \&, const T \&)$>$ is\+Equal=\mbox{[}$\,$\mbox{]}(const T \&a, const T \&b)\{ return a==b;\}) const
+\item 
+iterator \mbox{\hyperlink{class_concept_1_1_vector_a5c4b45f64ca14b02d544513c5b8ccbcd}{find}} (const T \&value, std\+::function$<$ bool(const T \&, const T \&)$>$ is\+Equal=\mbox{[}$\,$\mbox{]}(const T \&a, const T \&b) \{ return a==b;\})
+\item 
+const\+\_\+iterator \mbox{\hyperlink{class_concept_1_1_vector_a8e87660ff45eb3b2112edd8397373d2a}{find}} (const T \&value, std\+::function$<$ bool(const T \&, const T \&)$>$ is\+Equal=\mbox{[}$\,$\mbox{]}(const T \&a, const T \&b) \{ return a==b;\}) const
+\item 
+void \mbox{\hyperlink{class_concept_1_1_vector_afc564010d47219272ccc41a7536aa13f}{resize}} (size\+\_\+t len)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_concept_1_1_vector_a8cffe973b29a8139f5b8c65409ad9f95}{size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{class_concept_1_1_vector_a7c6ea6d0b7df98242f2247c8d5184c5f}{capacity}} () const
+\item 
+T $\ast$ \mbox{\hyperlink{class_concept_1_1_vector_a37d79a7609e4493dd0c10ab5948914ec}{data}} ()
+\item 
+const T $\ast$ \mbox{\hyperlink{class_concept_1_1_vector_a62b7aace523228b3c8dadf4c898cc01a}{data}} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_concept_1_1_vector_ac14c06b74acbf135ede85924e7b3d521}\label{class_concept_1_1_vector_ac14c06b74acbf135ede85924e7b3d521}} 
+{\footnotesize template$<$typename U , size\+\_\+t N$>$ }\\class {\bfseries Vector}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$\newline
+class Concept\+::\+Vector$<$ T, Small\+Vector\+Size $>$}
+
+\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} implementation with configurable small vector optimization 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_concept_1_1_vector_a279e17ea7182680f811e238bebb84232}\label{class_concept_1_1_vector_a279e17ea7182680f811e238bebb84232}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!Insertion@{Insertion}}
+\index{Insertion@{Insertion}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{Insertion}{Insertion}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+enum \mbox{\hyperlink{class_concept_1_1_vector_a279e17ea7182680f811e238bebb84232}{Concept\+::\+Vector\+::\+Insertion}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ORDERED@{ORDERED}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!ORDERED@{ORDERED}}}\mbox{\Hypertarget{class_concept_1_1_vector_a279e17ea7182680f811e238bebb84232abe7a0ac5e472b74b4bdc9c634c6c0fc3}\label{class_concept_1_1_vector_a279e17ea7182680f811e238bebb84232abe7a0ac5e472b74b4bdc9c634c6c0fc3}} 
+O\+R\+D\+E\+R\+ED&The collection is assumed unordered. Cannot be used along with U\+N\+I\+Q\+UE. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNIQUE@{UNIQUE}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!UNIQUE@{UNIQUE}}}\mbox{\Hypertarget{class_concept_1_1_vector_a279e17ea7182680f811e238bebb84232a6fd8fe1cd97c112ec879b5e2167a94f4}\label{class_concept_1_1_vector_a279e17ea7182680f811e238bebb84232a6fd8fe1cd97c112ec879b5e2167a94f4}} 
+U\+N\+I\+Q\+UE&The collection is assumed ordered. The collection is assumed to be a set. Requires O\+R\+D\+E\+R\+ED \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_concept_1_1_vector_a111960a70fa8b29a66ce1549039587d5}\label{class_concept_1_1_vector_a111960a70fa8b29a66ce1549039587d5}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor \mbox{\Hypertarget{class_concept_1_1_vector_a0fa645743cfbf3f3228743390ab30ddc}\label{class_concept_1_1_vector_a0fa645743cfbf3f3228743390ab30ddc}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ T $>$}]{init\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct the vector from an initialization list \mbox{\Hypertarget{class_concept_1_1_vector_af9fdc77be6f6efa6c5bae8c565c32c1a}\label{class_concept_1_1_vector_af9fdc77be6f6efa6c5bae8c565c32c1a}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ T, Small\+Vector\+Size $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Copy constructor. Share buffer if not owned, otherwise copy it \mbox{\Hypertarget{class_concept_1_1_vector_a23dd7da897297e5b69f1eefc55815cc0}\label{class_concept_1_1_vector_a23dd7da897297e5b69f1eefc55815cc0}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ T, Small\+Vector\+Size $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move constructor. Transfer buffer if heap-\/allocated or not owned. Otherwise copy it \mbox{\Hypertarget{class_concept_1_1_vector_ac2d544db8d0f9ebbd8802d0666ad930a}\label{class_concept_1_1_vector_ac2d544db8d0f9ebbd8802d0666ad930a}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} (\begin{DoxyParamCaption}\item[{const T $\ast$}]{buffer,  }\item[{size\+\_\+t}]{len,  }\item[{bool}]{copy = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor from a buffer. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the buffer to copy or to overlay \\
+\hline
+{\em len} & the buffer len \\
+\hline
+{\em copy} & if false, the vector does not own the buffer. It acts as a not owned overlay. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_concept_1_1_vector_af46219c89ed3a789fb78db51b0ec7639}\label{class_concept_1_1_vector_af46219c89ed3a789fb78db51b0ec7639}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+template$<$size\+\_\+t N, typename C\+H\+A\+R\+\_\+\+O\+N\+LY  = std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$\+T, char$>$\+::value, void$>$$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_concept_1_1_string}{String}}$<$ N $>$ \&}]{str,  }\item[{bool}]{copy = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+F\+I\+N\+A\+E-\/reserved constructor for Vectors of characters\+: Construct from a \mbox{\hyperlink{class_concept_1_1_string}{String}} lvalue reference \mbox{\Hypertarget{class_concept_1_1_vector_a69f43693d96addb57df7226512891c01}\label{class_concept_1_1_vector_a69f43693d96addb57df7226512891c01}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+template$<$size\+\_\+t N, typename C\+H\+A\+R\+\_\+\+O\+N\+LY  = std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$\+T, char$>$\+::value, void$>$$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_concept_1_1_string}{String}}$<$ N $>$ \&\&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+S\+F\+I\+N\+A\+E-\/reserved constructor for Vectors of characters\+: Construct from a string rvalue reference \mbox{\Hypertarget{class_concept_1_1_vector_a196f6eef1b0d3c04955d71d597e37c6f}\label{class_concept_1_1_vector_a196f6eef1b0d3c04955d71d597e37c6f}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!````~Vector@{$\sim$Vector}}
+\index{````~Vector@{$\sim$Vector}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{$\sim$Vector()}{~Vector()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::$\sim$\mbox{\hyperlink{class_concept_1_1_vector}{Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concept_1_1_vector_a118524e2ff65811ad0ad425153651a1f}\label{class_concept_1_1_vector_a118524e2ff65811ad0ad425153651a1f}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!begin@{begin}}
+\index{begin@{begin}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+iterator \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an iterator pointing to the first element 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_vector_a118524e2ff65811ad0ad425153651a1f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_vector_a0291fef67540e069d5b58d22f37f165f}\label{class_concept_1_1_vector_a0291fef67540e069d5b58d22f37f165f}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!begin@{begin}}
+\index{begin@{begin}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+const\+\_\+iterator \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a const iterator pointing to the first element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concept_1_1_vector_a7c6ea6d0b7df98242f2247c8d5184c5f}\label{class_concept_1_1_vector_a7c6ea6d0b7df98242f2247c8d5184c5f}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+size\+\_\+t \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the \mbox{\hyperlink{class_concept_1_1_vector}{Vector}} capacity 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_vector_a7c6ea6d0b7df98242f2247c8d5184c5f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_vector_a17d62b0ccb0f1cceb78748c44f625269}\label{class_concept_1_1_vector_a17d62b0ccb0f1cceb78748c44f625269}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!contains@{contains}}
+\index{contains@{contains}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+bool \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::contains (\begin{DoxyParamCaption}\item[{const T \&}]{value,  }\item[{std\+::function$<$ bool(const T \&, const T \&)$>$}]{is\+Equal = {\ttfamily \mbox{[}\mbox{]}(const~T\&~a,~const~T\&~b)\{~return~a~==~b;~\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if the vector contains that element 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to search \\
+\hline
+{\em comparator} & The comparisiom function. Set by default to the equality operator \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_vector_a17d62b0ccb0f1cceb78748c44f625269_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_vector_a37d79a7609e4493dd0c10ab5948914ec}\label{class_concept_1_1_vector_a37d79a7609e4493dd0c10ab5948914ec}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!data@{data}}
+\index{data@{data}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+T$\ast$ \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the internal buffer 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_concept_1_1_vector_a37d79a7609e4493dd0c10ab5948914ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_vector_a62b7aace523228b3c8dadf4c898cc01a}\label{class_concept_1_1_vector_a62b7aace523228b3c8dadf4c898cc01a}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!data@{data}}
+\index{data@{data}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+const T$\ast$ \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the internal buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concept_1_1_vector_acf6f0b48aa0ecbd09e327d6b173d9ed8}\label{class_concept_1_1_vector_acf6f0b48aa0ecbd09e327d6b173d9ed8}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!end@{end}}
+\index{end@{end}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+iterator \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an iterator pointing to the pass-\/the-\/end element 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_vector_acf6f0b48aa0ecbd09e327d6b173d9ed8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_vector_aa9a137bf9a8054ff5a5d543f45583fe5}\label{class_concept_1_1_vector_aa9a137bf9a8054ff5a5d543f45583fe5}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!end@{end}}
+\index{end@{end}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+const\+\_\+iterator \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a const iterator pointing to the pass-\/the-\/end element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concept_1_1_vector_a5c4b45f64ca14b02d544513c5b8ccbcd}\label{class_concept_1_1_vector_a5c4b45f64ca14b02d544513c5b8ccbcd}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!find@{find}}
+\index{find@{find}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+iterator \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{value,  }\item[{std\+::function$<$ bool(const T \&, const T \&)$>$}]{is\+Equal = {\ttfamily \mbox{[}\mbox{]}(const~T\&~a,~const~T\&~b)~\{~return~a~==~b;~\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Search linearly an element matching value 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to search \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an iterator pointing to the found element or \mbox{\hyperlink{class_concept_1_1_vector_acf6f0b48aa0ecbd09e327d6b173d9ed8}{end()}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concept_1_1_vector_a8e87660ff45eb3b2112edd8397373d2a}\label{class_concept_1_1_vector_a8e87660ff45eb3b2112edd8397373d2a}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!find@{find}}
+\index{find@{find}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+const\+\_\+iterator \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{value,  }\item[{std\+::function$<$ bool(const T \&, const T \&)$>$}]{is\+Equal = {\ttfamily \mbox{[}\mbox{]}(const~T\&~a,~const~T\&~b)~\{~return~a~==~b;~\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Search linearly an element matching value 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to search \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a const iterator pointing to the found element or \mbox{\hyperlink{class_concept_1_1_vector_acf6f0b48aa0ecbd09e327d6b173d9ed8}{end()}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concept_1_1_vector_abda5f983b8e539a72ea93e1a051d2b9c}\label{class_concept_1_1_vector_abda5f983b8e539a72ea93e1a051d2b9c}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!insert@{insert}}
+\index{insert@{insert}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+iterator \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::insert (\begin{DoxyParamCaption}\item[{const T \&}]{value,  }\item[{int}]{policy = {\ttfamily Insertion\+:\+:UNORDERED} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Inserts a value. 
+\begin{DoxyParams}{Parameters}
+{\em value} & to be inserted \\
+\hline
+{\em policy} & if Insertion\+::\+O\+R\+D\+E\+R\+ED, the set is assumed ordered if Insertion\+::\+U\+N\+I\+Q\+UE, the collection is assumed to be an ordered set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_concept_1_1_vector_acf6f0b48aa0ecbd09e327d6b173d9ed8}{end()}} if the vector is not owned. Otherwise return the insertion position 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_concept_1_1_vector_abda5f983b8e539a72ea93e1a051d2b9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_vector_a27a72907afb7223fe8a4f892000c8322}\label{class_concept_1_1_vector_a27a72907afb7223fe8a4f892000c8322}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!last@{last}}
+\index{last@{last}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{last()}{last()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+iterator \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an iterator pointing to the last element 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_vector_a27a72907afb7223fe8a4f892000c8322_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_vector_a6e0abe20c6601aafaa79581514243181}\label{class_concept_1_1_vector_a6e0abe20c6601aafaa79581514243181}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!last@{last}}
+\index{last@{last}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{last()}{last()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+const\+\_\+iterator \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+a const iterator pointing to the last element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concept_1_1_vector_a53641dbb6e511072424b38ca2ffdeeda}\label{class_concept_1_1_vector_a53641dbb6e511072424b38ca2ffdeeda}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}\& \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Append a value. This function has no effect if the vector is not owned \mbox{\Hypertarget{class_concept_1_1_vector_ab05ae64ae1973bf0c115575cadd2ebd8}\label{class_concept_1_1_vector_ab05ae64ae1973bf0c115575cadd2ebd8}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+template$<$size\+\_\+t N$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}\& \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ T, N $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Append another \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}. This function has no effect if the vector is not owned \mbox{\Hypertarget{class_concept_1_1_vector_a0ea691819713d696baa31ddba1240f13}\label{class_concept_1_1_vector_a0ea691819713d696baa31ddba1240f13}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}\& \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ T, Small\+Vector\+Size $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Copy-\/assignment of another \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}. Share buffer if not owned, Otherwise copy it \mbox{\Hypertarget{class_concept_1_1_vector_a3a30dc7360a5e0a94a80fe760446690c}\label{class_concept_1_1_vector_a3a30dc7360a5e0a94a80fe760446690c}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}\& \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ T, Small\+Vector\+Size $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move assignment of another \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}. Move buffer if heap-\/allocated or not owned, Otherwise copy it \mbox{\Hypertarget{class_concept_1_1_vector_a62f543e01ccc500d04e85a70b81bbfb2}\label{class_concept_1_1_vector_a62f543e01ccc500d04e85a70b81bbfb2}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+template$<$size\+\_\+t N$>$ \\
+bool \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ T, N $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Equality check \mbox{\Hypertarget{class_concept_1_1_vector_adb9742c5303dcae29b2b0bc933f52dec}\label{class_concept_1_1_vector_adb9742c5303dcae29b2b0bc933f52dec}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+T\& \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+begin iterator \mbox{\Hypertarget{class_concept_1_1_vector_a05d5953700c6b16d416be2b5bcc5a16e}\label{class_concept_1_1_vector_a05d5953700c6b16d416be2b5bcc5a16e}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+const T\& \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Bracket operator. \begin{DoxyReturn}{Returns}
+a constant reference to the item at pos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_concept_1_1_vector_a561e80a9c94307340601b7ab2270e101}\label{class_concept_1_1_vector_a561e80a9c94307340601b7ab2270e101}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+void \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Append a value. This function has no effect if the vector is not owned Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_vector_a561e80a9c94307340601b7ab2270e101_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_vector_a5d08a1e6b61f98f85076646d06ba8640}\label{class_concept_1_1_vector_a5d08a1e6b61f98f85076646d06ba8640}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!reserve@{reserve}}
+\index{reserve@{reserve}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+void \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::reserve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{vector\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Extend the internal buffer if smaller. This function has no effect if the vector is not owned Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_vector_a5d08a1e6b61f98f85076646d06ba8640_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_vector_afc564010d47219272ccc41a7536aa13f}\label{class_concept_1_1_vector_afc564010d47219272ccc41a7536aa13f}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!resize@{resize}}
+\index{resize@{resize}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+void \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Resize the \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}. \begin{DoxyNote}{Note}
+the actual storage never reduces. This function has no effect if the vector is not owned and the length exceeds the buffer size 
+\end{DoxyNote}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_vector_afc564010d47219272ccc41a7536aa13f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_vector_a8cffe973b29a8139f5b8c65409ad9f95}\label{class_concept_1_1_vector_a8cffe973b29a8139f5b8c65409ad9f95}} 
+\index{Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}!size@{size}}
+\index{size@{size}!Concept::Vector$<$ T, SmallVectorSize $>$@{Concept::Vector$<$ T, SmallVectorSize $>$}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Small\+Vector\+Size = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE$>$ \\
+size\+\_\+t \mbox{\hyperlink{class_concept_1_1_vector}{Concept\+::\+Vector}}$<$ T, Small\+Vector\+Size $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the \mbox{\hyperlink{class_concept_1_1_vector}{Vector}} size 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_vector_a8cffe973b29a8139f5b8c65409ad9f95_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_vector_8hpp}{Vector.\+hpp}}\end{DoxyCompactItemize}

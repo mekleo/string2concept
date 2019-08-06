@@ -1,0 +1,196 @@
+\hypertarget{class_concept_1_1_concept_extractor}{}\section{Concept\+::Concept\+Extractor Class Reference}
+\label{class_concept_1_1_concept_extractor}\index{Concept::ConceptExtractor@{Concept::ConceptExtractor}}
+
+
+{\ttfamily \#include $<$Concept\+Extractor.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_concept_1_1_concept_extractor_a3368cfbb0efde84ec506ffa6dfa260b3}{Concept\+Extractor}} (std\+::initializer\+\_\+list$<$ const char $\ast$ $>$ concept\+List)
+\item 
+\mbox{\hyperlink{class_concept_1_1_concept_extractor_ad4f2e846cdbeed815dc018bc5235716c}{Concept\+Extractor}} (const char $\ast$concept\+File\+Path)
+\item 
+void \mbox{\hyperlink{class_concept_1_1_concept_extractor_af42c1de7919fccadf14e33f48af3fb3a}{add\+Concept}} (const char $\ast$concept)
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{class_concept_1_1_string}{String}}$<$$>$ $>$ \mbox{\hyperlink{class_concept_1_1_concept_extractor_a34afbe33a9c98d648df5976202ac05cf}{get}} (const \mbox{\hyperlink{class_concept_1_1_string}{String}}$<$ N $>$ \&input)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\static void \mbox{\hyperlink{class_concept_1_1_concept_extractor_a975f600a76c667d317fbde638ebb0c48}{lower\+Case}} (\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ char, N $>$ \&ascii\+Text)
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\static void \mbox{\hyperlink{class_concept_1_1_concept_extractor_a48c47fd5c4eaa6b6bfd5edd127d5d492}{normalize}} (\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ char, N $>$ \&text)
+\item 
+static bool \mbox{\hyperlink{class_concept_1_1_concept_extractor_ab4ca9179d4756d3d68b47c7256aea880}{is\+Punctuation}} (char ch)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_concept_1_1_concept_extractor_ab6c5459d1379b79c69b29023bb3f552e}\label{class_concept_1_1_concept_extractor_ab6c5459d1379b79c69b29023bb3f552e}} 
+static const size\+\_\+t {\bfseries M\+A\+X\+\_\+\+C\+O\+N\+C\+E\+P\+T\+\_\+\+L\+E\+N\+G\+TH} = 1024
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main class. It extracts concepts from a text. It is a variant of the Rabin-\/\+Karp algorithm. It differs from vanilla Rabin-\/\+Karp by the variable-\/length patterns and because the number of comparisions is linear with the number of words, rather that linear with the number of characters.
+
+We intend to search for a huge number of concepts of various lengths in an input text. For reaching linear time complexity on average, independent from the number of concepts, we store concepts in a \mbox{\hyperlink{class_concept_1_1_hash}{Hash}} table keyed by lowercase words. As core data structure, the \mbox{\hyperlink{class_concept_1_1_hash}{Hash}} table is designed as follows \+:
+\begin{DoxyEnumerate}
+\item the keys are lowercased concepts or the first word of concepts
+\item the values are pairs of the key in its original case , and a vector of concepts lengths (number of words)
+\begin{DoxyItemize}
+\item If that length is one, the item itself is a concept
+\item If that length m is greater than 1, there exist concepts of size m in the hashtable.Whenever we find an input word in the \mbox{\hyperlink{class_concept_1_1_hash_table}{Hash\+Table}}, we try to find the next m words. Every match for the expected length is a Concept and must be returned.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+This algorithm\textquotesingle{}s complexity in time is, on average, linear with the number k of words in input + the average number l of words in the concepts To that, we add a linear term for an initial segmentation of the text into words (zero-\/copy process) i.\+e. O(k + l) + O(n). Its theoretical worst-\/case is O(k$\ast$l) + O(n). That only occurs in the hypothetical case where all hashes collide. This implies a rather poor hash function.
+
+We prefer this algorithm to the Aho-\/\+Corasick algorithm (AC). While AC achieves an interesting linear asymptotic worst-\/case time complexity O(n + m), our algorithm might be faster because, as it jumps from word to word, it achieves less comparisions. Indeed, Aho-\/\+Corasick\textquotesingle{}s automata are character-\/oriented. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_concept_1_1_concept_extractor_a3368cfbb0efde84ec506ffa6dfa260b3}\label{class_concept_1_1_concept_extractor_a3368cfbb0efde84ec506ffa6dfa260b3}} 
+\index{Concept::ConceptExtractor@{Concept::ConceptExtractor}!ConceptExtractor@{ConceptExtractor}}
+\index{ConceptExtractor@{ConceptExtractor}!Concept::ConceptExtractor@{Concept::ConceptExtractor}}
+\subsubsection{\texorpdfstring{ConceptExtractor()}{ConceptExtractor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Concept\+::\+Concept\+Extractor\+::\+Concept\+Extractor (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ const char $\ast$ $>$}]{concept\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct concepts from list of null-\/terminated strings Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_concept_extractor_a3368cfbb0efde84ec506ffa6dfa260b3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_concept_extractor_ad4f2e846cdbeed815dc018bc5235716c}\label{class_concept_1_1_concept_extractor_ad4f2e846cdbeed815dc018bc5235716c}} 
+\index{Concept::ConceptExtractor@{Concept::ConceptExtractor}!ConceptExtractor@{ConceptExtractor}}
+\index{ConceptExtractor@{ConceptExtractor}!Concept::ConceptExtractor@{Concept::ConceptExtractor}}
+\subsubsection{\texorpdfstring{ConceptExtractor()}{ConceptExtractor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Concept\+::\+Concept\+Extractor\+::\+Concept\+Extractor (\begin{DoxyParamCaption}\item[{const char $\ast$}]{concept\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct concepts from a file path Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_concept_extractor_ad4f2e846cdbeed815dc018bc5235716c_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concept_1_1_concept_extractor_af42c1de7919fccadf14e33f48af3fb3a}\label{class_concept_1_1_concept_extractor_af42c1de7919fccadf14e33f48af3fb3a}} 
+\index{Concept::ConceptExtractor@{Concept::ConceptExtractor}!addConcept@{addConcept}}
+\index{addConcept@{addConcept}!Concept::ConceptExtractor@{Concept::ConceptExtractor}}
+\subsubsection{\texorpdfstring{addConcept()}{addConcept()}}
+{\footnotesize\ttfamily void Concept\+::\+Concept\+Extractor\+::add\+Concept (\begin{DoxyParamCaption}\item[{const char $\ast$}]{concept }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a concept in the \mbox{\hyperlink{class_concept_1_1_hash}{Hash}} table Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_concept_extractor_af42c1de7919fccadf14e33f48af3fb3a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_concept_extractor_af42c1de7919fccadf14e33f48af3fb3a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_concept_extractor_a34afbe33a9c98d648df5976202ac05cf}\label{class_concept_1_1_concept_extractor_a34afbe33a9c98d648df5976202ac05cf}} 
+\index{Concept::ConceptExtractor@{Concept::ConceptExtractor}!get@{get}}
+\index{get@{get}!Concept::ConceptExtractor@{Concept::ConceptExtractor}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N$>$ \\
+\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$\mbox{\hyperlink{class_concept_1_1_string}{String}}$<$$>$ $>$ Concept\+::\+Concept\+Extractor\+::get (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_concept_1_1_string}{String}}$<$ N $>$ \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Extract concepts from an input text 
+\begin{DoxyParams}{Parameters}
+{\em input} & The input text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of concepts 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_concept_extractor_a34afbe33a9c98d648df5976202ac05cf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_concept_extractor_ab4ca9179d4756d3d68b47c7256aea880}\label{class_concept_1_1_concept_extractor_ab4ca9179d4756d3d68b47c7256aea880}} 
+\index{Concept::ConceptExtractor@{Concept::ConceptExtractor}!isPunctuation@{isPunctuation}}
+\index{isPunctuation@{isPunctuation}!Concept::ConceptExtractor@{Concept::ConceptExtractor}}
+\subsubsection{\texorpdfstring{isPunctuation()}{isPunctuation()}}
+{\footnotesize\ttfamily static bool Concept\+::\+Concept\+Extractor\+::is\+Punctuation (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+true if ch is a punctuation character 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_concept_extractor_ab4ca9179d4756d3d68b47c7256aea880_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_concept_extractor_ab4ca9179d4756d3d68b47c7256aea880_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_concept_extractor_a975f600a76c667d317fbde638ebb0c48}\label{class_concept_1_1_concept_extractor_a975f600a76c667d317fbde638ebb0c48}} 
+\index{Concept::ConceptExtractor@{Concept::ConceptExtractor}!lowerCase@{lowerCase}}
+\index{lowerCase@{lowerCase}!Concept::ConceptExtractor@{Concept::ConceptExtractor}}
+\subsubsection{\texorpdfstring{lowerCase()}{lowerCase()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N$>$ \\
+static void Concept\+::\+Concept\+Extractor\+::lower\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ char, N $>$ \&}]{ascii\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Lowercase A\+S\+C\+II characters 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em ascii\+Text} & The text that will be subsequently modified. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_concept_extractor_a975f600a76c667d317fbde638ebb0c48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_concept_extractor_a48c47fd5c4eaa6b6bfd5edd127d5d492}\label{class_concept_1_1_concept_extractor_a48c47fd5c4eaa6b6bfd5edd127d5d492}} 
+\index{Concept::ConceptExtractor@{Concept::ConceptExtractor}!normalize@{normalize}}
+\index{normalize@{normalize}!Concept::ConceptExtractor@{Concept::ConceptExtractor}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N$>$ \\
+static void Concept\+::\+Concept\+Extractor\+::normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ char, N $>$ \&}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Normalize A\+S\+C\+II characters in lowercasing it, then removing punctuation and extra separators. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em text} & The text that will be subsequently modified. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_concept_extractor_a48c47fd5c4eaa6b6bfd5edd127d5d492_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_concept_extractor_a48c47fd5c4eaa6b6bfd5edd127d5d492_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_concept_extractor_8hpp}{Concept\+Extractor.\+hpp}}\end{DoxyCompactItemize}

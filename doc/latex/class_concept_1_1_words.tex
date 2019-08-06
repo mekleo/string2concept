@@ -1,0 +1,166 @@
+\hypertarget{class_concept_1_1_words}{}\section{Concept\+::Words Class Reference}
+\label{class_concept_1_1_words}\index{Concept::Words@{Concept::Words}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_concept_1_1_words_abfeda0970f6853700b350dc1e26c5723}\label{class_concept_1_1_words_abfeda0970f6853700b350dc1e26c5723}} 
+using {\bfseries Word\+Vector} = \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ char $>$ $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\\mbox{\hyperlink{class_concept_1_1_words_a8a8447c2038540ffcdf0052e0edec2c4}{Words}} (const \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ char, N $>$ \&text, bool copy=true)
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector}{Word\+Vector\+::const\+\_\+iterator}} \mbox{\hyperlink{class_concept_1_1_words_a90f042f181232ee4ca33668e1c7d82c9}{begin}} () const
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector}{Word\+Vector\+::const\+\_\+iterator}} \mbox{\hyperlink{class_concept_1_1_words_a9d52168c7d5655db4aaf8959c011f549}{end}} () const
+\item 
+\mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ char $>$ \mbox{\hyperlink{class_concept_1_1_words_a96f098f0ad1a12e098ad515bf1e38fd1}{get}} (\mbox{\hyperlink{class_concept_1_1_vector}{Word\+Vector\+::const\+\_\+iterator}} first, size\+\_\+t word\+Count)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_concept_1_1_words_aecd76499829e2452564918a777ca8016}{length}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_concept_1_1_words_a82004181ac36a8e592e3ddba2f314840}{is\+Separator}} (char ch)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_concept_1_1_words_a8a8447c2038540ffcdf0052e0edec2c4}\label{class_concept_1_1_words_a8a8447c2038540ffcdf0052e0edec2c4}} 
+\index{Concept::Words@{Concept::Words}!Words@{Words}}
+\index{Words@{Words}!Concept::Words@{Concept::Words}}
+\subsubsection{\texorpdfstring{Words()}{Words()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N$>$ \\
+Concept\+::\+Words\+::\+Words (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$ char, N $>$ \&}]{text,  }\item[{bool}]{copy = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor Extract words from text 
+\begin{DoxyParams}{Parameters}
+{\em text} & the text to pick words from \\
+\hline
+{\em copy} & if true, the words are copied internally. Otherwise overlay the text buffer. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_words_a8a8447c2038540ffcdf0052e0edec2c4_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_concept_1_1_words_a90f042f181232ee4ca33668e1c7d82c9}\label{class_concept_1_1_words_a90f042f181232ee4ca33668e1c7d82c9}} 
+\index{Concept::Words@{Concept::Words}!begin@{begin}}
+\index{begin@{begin}!Concept::Words@{Concept::Words}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_concept_1_1_vector}{Word\+Vector\+::const\+\_\+iterator}} Concept\+::\+Words\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an iterator pointing to first word 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_concept_1_1_words_a90f042f181232ee4ca33668e1c7d82c9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_words_a90f042f181232ee4ca33668e1c7d82c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_words_a9d52168c7d5655db4aaf8959c011f549}\label{class_concept_1_1_words_a9d52168c7d5655db4aaf8959c011f549}} 
+\index{Concept::Words@{Concept::Words}!end@{end}}
+\index{end@{end}!Concept::Words@{Concept::Words}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_concept_1_1_vector}{Word\+Vector\+::const\+\_\+iterator}} Concept\+::\+Words\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+an iterator pointing to the pass-\/the-\/end word 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_concept_1_1_words_a9d52168c7d5655db4aaf8959c011f549_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_words_a9d52168c7d5655db4aaf8959c011f549_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_words_a96f098f0ad1a12e098ad515bf1e38fd1}\label{class_concept_1_1_words_a96f098f0ad1a12e098ad515bf1e38fd1}} 
+\index{Concept::Words@{Concept::Words}!get@{get}}
+\index{get@{get}!Concept::Words@{Concept::Words}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_concept_1_1_vector}{Vector}}$<$char$>$ Concept\+::\+Words\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_concept_1_1_vector}{Word\+Vector\+::const\+\_\+iterator}}}]{first,  }\item[{size\+\_\+t}]{word\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the sequence of \textquotesingle{}word\+Count\textquotesingle{} words starting at \textquotesingle{}first\textquotesingle{} \begin{DoxyReturn}{Returns}
+an empty \mbox{\hyperlink{class_concept_1_1_vector}{Vector}} if the words cannot be found 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_words_a96f098f0ad1a12e098ad515bf1e38fd1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_words_a96f098f0ad1a12e098ad515bf1e38fd1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_words_a82004181ac36a8e592e3ddba2f314840}\label{class_concept_1_1_words_a82004181ac36a8e592e3ddba2f314840}} 
+\index{Concept::Words@{Concept::Words}!isSeparator@{isSeparator}}
+\index{isSeparator@{isSeparator}!Concept::Words@{Concept::Words}}
+\subsubsection{\texorpdfstring{isSeparator()}{isSeparator()}}
+{\footnotesize\ttfamily static bool Concept\+::\+Words\+::is\+Separator (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+true if ch is a separator 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_words_a82004181ac36a8e592e3ddba2f314840_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_concept_1_1_words_aecd76499829e2452564918a777ca8016}\label{class_concept_1_1_words_aecd76499829e2452564918a777ca8016}} 
+\index{Concept::Words@{Concept::Words}!length@{length}}
+\index{length@{length}!Concept::Words@{Concept::Words}}
+\subsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily size\+\_\+t Concept\+::\+Words\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of words 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_concept_1_1_words_aecd76499829e2452564918a777ca8016_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_concept_1_1_words_aecd76499829e2452564918a777ca8016_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_words_8hpp}{Words.\+hpp}}\end{DoxyCompactItemize}

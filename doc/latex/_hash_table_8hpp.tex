@@ -1,0 +1,111 @@
+\hypertarget{_hash_table_8hpp}{}\section{Hash\+Table.\+hpp File Reference}
+\label{_hash_table_8hpp}\index{HashTable.hpp@{HashTable.hpp}}
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include \char`\"{}Hash.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}String.\+hpp\char`\"{}}\newline
+Include dependency graph for Hash\+Table.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_hash_table_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{_hash_table_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_concept_1_1_hash_table}{Concept\+::\+Hash\+Table$<$ Key, Value, Small\+Hash\+Table\+Bucket\+Count, Hash\+Type $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_hash_table_8hpp_a52564c177fadae222c29e568995334e2}{Concept\+::is\+Prime}} (size\+\_\+t n, size\+\_\+t l)
+\item 
+size\+\_\+t \mbox{\hyperlink{_hash_table_8hpp_a8255b409e64ad49d866508a02055813a}{Concept\+::next\+Prime\+From}} (size\+\_\+t n)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{_hash_table_8hpp_ab461e6faa20ed32c4ac7269c3856a500}{Concept\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT}} = 1031
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Leonce Mekinda \href{https://sites.google.com/site/leoncemekinda/}{\texttt{ https\+://sites.\+google.\+com/site/leoncemekinda/}}
+\end{DoxyAuthor}
+\hypertarget{_words_8hpp_LICENSE}{}\subsection{L\+I\+C\+E\+N\+SE}\label{_words_8hpp_LICENSE}
+The M\+IT License
+
+Copyright(c) 2019 Leonce Mekinda
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files(the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and / or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions \+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+N\+T.\+IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE
+
+
+
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_hash_table_8hpp_file_a52564c177fadae222c29e568995334e2}\label{_hash_table_8hpp_file_a52564c177fadae222c29e568995334e2}} 
+\index{HashTable.hpp@{HashTable.hpp}!isPrime@{isPrime}}
+\index{isPrime@{isPrime}!HashTable.hpp@{HashTable.hpp}}
+\subsubsection{\texorpdfstring{isPrime()}{isPrime()}}
+{\footnotesize\ttfamily bool Concept\+::is\+Prime (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n,  }\item[{size\+\_\+t}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Verify that n prime, stating from l, at compile time Must not exceed 512 iterations due to compiler limitations. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{_hash_table_8hpp_a52564c177fadae222c29e568995334e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_hash_table_8hpp_a52564c177fadae222c29e568995334e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_hash_table_8hpp_file_a8255b409e64ad49d866508a02055813a}\label{_hash_table_8hpp_file_a8255b409e64ad49d866508a02055813a}} 
+\index{HashTable.hpp@{HashTable.hpp}!nextPrimeFrom@{nextPrimeFrom}}
+\index{nextPrimeFrom@{nextPrimeFrom}!HashTable.hpp@{HashTable.hpp}}
+\subsubsection{\texorpdfstring{nextPrimeFrom()}{nextPrimeFrom()}}
+{\footnotesize\ttfamily size\+\_\+t Concept\+::next\+Prime\+From (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Compute the next prime after n, at compile time Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{_hash_table_8hpp_a8255b409e64ad49d866508a02055813a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_hash_table_8hpp_a8255b409e64ad49d866508a02055813a_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_hash_table_8hpp_file_ab461e6faa20ed32c4ac7269c3856a500}\label{_hash_table_8hpp_file_ab461e6faa20ed32c4ac7269c3856a500}} 
+\index{HashTable.hpp@{HashTable.hpp}!DEFAULT\_SMALL\_HASHTABLE\_BUCKET\_COUNT@{DEFAULT\_SMALL\_HASHTABLE\_BUCKET\_COUNT}}
+\index{DEFAULT\_SMALL\_HASHTABLE\_BUCKET\_COUNT@{DEFAULT\_SMALL\_HASHTABLE\_BUCKET\_COUNT}!HashTable.hpp@{HashTable.hpp}}
+\subsubsection{\texorpdfstring{DEFAULT\_SMALL\_HASHTABLE\_BUCKET\_COUNT}{DEFAULT\_SMALL\_HASHTABLE\_BUCKET\_COUNT}}
+{\footnotesize\ttfamily constexpr size\+\_\+t Concept\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+M\+A\+L\+L\+\_\+\+H\+A\+S\+H\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+C\+O\+U\+NT = 1031}
+
+Choose large prime numbers for bucket counts. This improves the bucket allocation uniformity as they do not have factors. Indeed, if the bucket count K is not a prime number, hash values that are bigger-\/than-\/K multiples of its factors collide with other multiples. The less uniformly-\/distributed the Hash function, the more severe the issue. 

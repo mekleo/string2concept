@@ -16,8 +16,9 @@ We intend to search for a huge number of concepts of various lengths in an input
 For reaching linear time complexity on average, independent from the number of concepts,
 we store concepts in a Hash table keyed by lowercased words.
 As core data structure, the Hash table is designed as follows :
--# the keys are lowercased concepts or the first word of concepts
--# the values are pairs of the key in its original case, and a vector of concepts lengths (number of words)
+
+- the keys are lowercased concepts or the first word of concepts
+- the values are pairs of the key in its original case, and a vector of concepts lengths (number of words)
   - If that length is one, the item itself is a concept
   - If that length m is greater than 1, there exist concepts of size m in the hashtable.
     .
