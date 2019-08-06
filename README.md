@@ -43,14 +43,22 @@ or
 
 ## Build
 
+### Linux, MacOSX
 ```
 make
 ```
+### Windows
+Open the solution file string2concept.sln in Visual Studio 2015 and build.
 
 ## Run unit tests
 
 ```
 make test
+```
+or
+
+```
+./string2concept --test
 ```
 
 ## Run example
